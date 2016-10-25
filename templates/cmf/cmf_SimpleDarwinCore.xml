@@ -1,0 +1,1161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conceptMapping xmlns="http://www.biocase.org/schemas/conceptmapping/2.1">
+	<metadata>
+		<generated when="2005-07-06 14:39:18.15" by="PyWrapper v2.0.0"/>
+	</metadata>
+	<settings>
+		<rootTableAlias/>
+	</settings>
+	<recordIdentifier>/SimpleDarwinRecordSet/SimpleDarwinRecord</recordIdentifier>
+	<dataElement name="SimpleDarwinRecordSet" min="1" max="1" namespace="http://rs.tdwg.org/dwc/xsd/simpledarwincore"
+		path="/SimpleDarwinRecordSet">
+		<annot>Simple container to encode multiple darwin core records that have no notion of which class they are. They can therefore represent a taxon, an observation or just a locality, for example.</annot>
+		<childElements>
+			<dataElement name="SimpleDarwinRecord" min="1" max="-1"
+				namespace="http://rs.tdwg.org/dwc/xsd/simpledarwincore"
+				path="/SimpleDarwinRecordSet/SimpleDarwinRecord">
+				<childElements>
+				    <!-- Record-Level terms -->
+					<dataElement name="type" min="1" max="1"
+						namespace="http://purl.org/dc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/type">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="modified" min="0" max="1"
+						namespace="http://purl.org/dc/terms"
+						w3cType="dateTime"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/modified">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="language" min="0" max="1"
+						namespace="http://purl.org/dc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/language">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="license" min="0" max="1"
+						namespace="http://purl.org/dc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/license">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="rightsHolder" min="0" max="1"
+						namespace="http://purl.org/dc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/rightsHolder">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="accessRights" min="0" max="1"
+						namespace="http://purl.org/dc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/accessRights">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="bibliographicCitation" min="0" max="1"
+						namespace="http://purl.org/dc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/bibliographicCitation">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="references" min="0" max="1"
+						namespace="http://purl.org/dc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/references">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="institutionID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/institutionID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="collectionID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/collectionID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="datasetID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/datasetID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="institutionCode" min="1" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/institutionCode">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="collectionCode" min="1" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/collectionCode">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="datasetName" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/datasetName">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="ownerInstitutionCode" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/ownerInstitutionCode">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="basisOfRecord" min="1" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/basisOfRecord">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="informationWithheld" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/informationWithheld">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="dataGeneralizations" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/dataGeneralizations">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="dynamicProperties" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/dynamicProperties">
+						<annot></annot>
+					</dataElement>
+					
+					<!-- Occurrence terms -->
+					<dataElement name="occurrenceID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/occurrenceID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="catalogNumber" min="1" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/catalogNumber">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="recordNumber" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/recordNumber">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="recordedBy" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/recordedBy">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="individualCount" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/individualCount">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="organismQuantity" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/organismQuantity">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="organismQuantityType" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/organismQuantityType">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="sex" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/sex">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="lifeStage" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/lifeStage">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="reproductiveCondition" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/reproductiveCondition">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="behavior" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/behavior">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="establishmentMeans" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/establishmentMeans">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="occurrenceStatus" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/occurrenceStatus">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="preparations" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/preparations">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="disposition" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/disposition">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="associatedMedia" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/associatedMedia">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="associatedReferences" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/associatedReferences">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="associatedSequences" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/associatedSequences">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="associatedTaxa" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/associatedTaxa">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="otherCatalogNumbers" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/otherCatalogNumbers">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="occurrenceRemarks" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/occurrenceRemarks">
+						<annot></annot>
+					</dataElement>
+
+					<!-- Organism terms -->
+					<dataElement name="organismID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/organismID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="organismName" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/organismName">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="organismScope" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/organismScope">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="associatedOccurrences" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/associatedOccurrences">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="associatedOrganisms" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/associatedOrganisms">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="previousIdentifications" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/previousIdentifications">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="organismRemarks" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/organsimRemarks">
+						<annot></annot>
+					</dataElement>
+
+					<!-- MaterialSample terms -->
+					<dataElement name="materialSampleID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/materialSampleID">
+						<annot></annot>
+					</dataElement>
+					
+					<!-- Event terms -->
+					<dataElement name="eventID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/eventID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="parentEventID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/parentEventID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="fieldNumber" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/fieldNumber">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="eventDate" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="dateTime"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/eventDate">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="eventTime" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="time"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/eventTime">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="startDayOfYear" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="integer"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/startDayOfYear">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="endDayOfYear" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="integer"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/endDayOfYear">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="year" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="integer"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/year">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="month" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="integer"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/month">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="day" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="integer"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/day">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="verbatimEventDate" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/verbatimEventDate">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="habitat" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/habitat">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="samplingProtocol" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/samplingProtocol">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="samplingEffort" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/samplingEffort">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="sampleSizeValue" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/sampleSizeValue">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="sampleSizeUnit" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/sampleSizeUnit">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="fieldNotes" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/fieldNotes">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="eventRemarks" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/eventRemarks">
+						<annot></annot>
+					</dataElement>
+					
+
+					<!-- Location terms -->
+					<dataElement name="locationID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/locationID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="higherGeographyID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/higherGeographyID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="higherGeography" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/higherGeography">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="continent" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/continent">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="waterBody" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/waterBody">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="islandGroup" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/islandGroup">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="country" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/country">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="countryCode" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/countryCode">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="stateProvince" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/stateProvince">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="county" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/county">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="municipality" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/municipality">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="locality" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/locality">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="verbatimLocality" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/verbatimLocality">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="minimumElevationInMeters" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="decimal"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/minimumElevationInMeters">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="maximumElevationInMeters" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="decimal"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/maximumElevationInMeters">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="verbatimElevation" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/verbatimElevation">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="minimumDepthInMeters" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="decimal"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/minumumDepthInMeters">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="maximumDepthInMeters" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="decimal"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/maximumDepthInMeters">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="verbatimDepth" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/verbatimDepth">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="minimumDistanceAboveSurfaceInMeters" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="decimal"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/minimumDistanceAboveSurfaceInMeters">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="maximumDistanceAboveSurfaceInMeters" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="decimal"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/maximumDistanceAboveSurfaceInMeters">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="locationAccordingTo" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/locationAccordingTo">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="locationRemarks" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/locationRemarks">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="decimalLatitude" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="decimal"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/decimalLatitude">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="decimalLongitude" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="decimal"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/decimalLongitude">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="geodeticDatum" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/geodeticDatum">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="coordinateUncertaintyInMeters" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="decimal"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/coordinateUncertaintyInMeters">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="coordinatePrecision" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="decimal"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/coordinatePrecision">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="pointRadiusSpatialFit" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="decimal"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/pointRadiusSpatialFit">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="verbatimCoordinates" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/verbatimCoordinates">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="verbatimLongitude" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/verbatimLongitude">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="verbatimLatitude" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/verbatimLatitude">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="verbatimCoordinateSystem" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/verbatimCoordinateSystem">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="verbatimSRS" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/verbatimSRS">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="footprintWKT" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/footprintWKT">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="footprintSRS" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/footprintSRS">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="footprintSpatialFit" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="decimal"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/locationID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="georeferencedBy" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/georeferencedBy">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="georeferencedDate" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="dateTime"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/georeferencedDate">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="georeferenceProtocol" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/georeferenceProtocol">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="georeferenceSources" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/georeferenceSources">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="georeferenceVerificationStatus" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/georeferenceVerificationStatus">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="georeferenceRemarks" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/georeferenceRemarks">
+						<annot></annot>
+					</dataElement>
+
+					<!-- GeologicalContext terms -->
+					<dataElement name="geologicalContextID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/geologicalContextID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="earliestEonOrLowestEonothem" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/earliestEonOrLowestEonothem">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="latestEonOrHighestEonothem" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/latestEonOrHighestEonothem">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="earliestEraOrLowestErathem" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/earliestEraOrLowestErathem">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="latestEraOrHighestErathem" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/latestEraOrHighestErathem">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="earliestPeriodOrLowestSystem" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/earliestPeriodOrLowestSystem">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="latestPeriodOrHighestSystem" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/latestPeriodOrHighestSystem">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="earliestEpochOrLowestSeries" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/earliestEpochOrLowestSeries">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="latestEpochOrHighestSeries" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/latestEpochOrHighestSeries">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="earliestAgeOrLowestStage" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/earliestAgeOrLowestStage">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="latestAgeOrHighestStage" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/latestAgeOrHighestStage">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="lowestBiostratigraphicZone" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/lowestBiostratigraphicZone">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="highestBiostratigraphicZone" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/highestBiostratigraphicZone">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="lithostratigraphicZone" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/lithostratigraphicZone">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="group" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/group">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="formation" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/formation">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="member" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/member">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="bed" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/bed">
+						<annot></annot>
+					</dataElement>
+
+					<!-- Identification terms -->
+					<dataElement name="identificationID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/locationID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="identificationQualifier" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/identificationQualifier">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="typeStatus" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/typeStatus">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="identifiedBy" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/identifiedBy">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="dateIdentified" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="dateTime"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/dateIdentified">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="identificationReferences" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/identificationReferences">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="identificationVerificationStatus" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/identificationVerificationStatus">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="identificationRemarks" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/identificationRemarks">
+						<annot></annot>
+					</dataElement>
+					
+					<!-- Taxon terms -->
+					<dataElement name="taxonID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/taxonID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="scientificNameID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/scientificNameID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="acceptedNameUsageID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/acceptedNameUsageID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="parentNameUsageID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/parentNameUsageID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="originalNameUsageID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/originalNameUsageID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="nameAccordingToID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/nameAccordingToID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="namePublishedInID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/namePublishedInID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="taxonConceptID" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/taxonConceptID">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="scientificName" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/scientificName">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="acceptedNameUsage" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/acceptedNameUsage">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="parentNameUsage" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/parentNameUsage">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="originalNameUsage" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/originalNameUsage">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="nameAccordingTo" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/nameAccordingTo">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="namePublishedIn" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/namePublishedIn">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="namePublishedInYear" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/namePublishedInYear">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="higherClassification" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/higherClassification">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="kingdom" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/kingdom">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="phylum" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/phylum">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="class" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/class">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="order" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/order">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="family" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/family">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="genus" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/genus">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="specificEpithet" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/specificEpithet">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="infraspecificEpithet" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/infraspecificEpithet">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="taxonRank" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/taxonRank">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="verbatimTaxonRank" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/verbatimTaxonRank">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="scientificNameAuthorship" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/scientificNameAuthorship">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="vernacularName" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/vernacularName">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="nomenclaturalCode" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/nomenclaturalCode">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="taxonomicStatus" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/taxonomicStatus">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="nomenclaturalStatus" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/nomenclaturalStatus">
+						<annot></annot>
+					</dataElement>
+					<dataElement name="taxonRemarks" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/terms"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/taxonRemarks">
+						<annot></annot>
+					</dataElement>
+					
+					<!-- Simple Darwin Core extensions -->
+					<dataElement name="SimpleDarwinCoreExtensions" min="0" max="1"
+						namespace="http://rs.tdwg.org/dwc/xsd/simpledarwincore"
+						w3cType="normalizedString"
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions">
+						<annot></annot>
+						<childElements>
+							<!-- MEASUREMENTORFACT -->
+							<dataElement name="MeasurementOrFact" min="0" max="-1"
+								namespace="http://rs.tdwg.org/dwc/terms"
+								w3cType="normalizedString"
+								path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/MeasurementOrFact">
+								<annot></annot>
+								<childElements>
+									<dataElement name="measurementID" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/MeasurementOrFact/measurementID">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="measurementType" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/MeasurementOrFact/measurementType">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="measurementValue" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/MeasurementOrFact/measurementValue">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="measurementAccuracy" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/MeasurementOrFact/measurementAccuracy">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="measurementUnit" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/MeasurementOrFact/measurementUnit">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="measurementDeterminedBy" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/MeasurementOrFact/measurementDeterminedBy">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="measurementDeterminedDate" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="dateTime"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/MeasurementOrFact/measurementDeterminedDate">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="measurementMethod" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/MeasurementOrFact/measurementMethod">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="measurementRemarks" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/MeasurementOrFact/measurementRemarks">
+										<annot></annot>
+									</dataElement>
+								</childElements>
+							</dataElement>
+							
+							<!-- RESOURCE RELATIONSHIP -->
+							<dataElement name="ResourceRelationship" min="0" max="-1"
+								namespace="http://rs.tdwg.org/dwc/terms"
+								w3cType="normalizedString"
+								path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/ResourceRelationship">
+								<annot></annot>
+								<childElements>
+									<dataElement name="resourceRelationshipID" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/ResourceRelationship/resourceRelationshipID">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="relatedResourceID" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/ResourceRelationship/relatedResourceID">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="relationshipOfResource" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/ResourceRelationship/relationshipOfResource">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="relationshipAccordingTo" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/ResourceRelationship/relationshipAccordingTo">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="relationshipEstablishedDate" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/ResourceRelationship/relationshipEstablishedDate">
+										<annot></annot>
+									</dataElement>
+									<dataElement name="relationshipRemarks" min="0" max="1"
+										namespace="http://rs.tdwg.org/dwc/terms"
+										w3cType="normalizedString"
+										path="/SimpleDarwinRecordSet/SimpleDarwinRecord/SimpleDarwinCoreExtensions/ResourceRelationship/relationshipRemarks">
+										<annot></annot>
+									</dataElement>
+								</childElements>
+							</dataElement>
+						</childElements>
+					</dataElement>
+				</childElements>
+			</dataElement>
+		</childElements>
+	</dataElement>
+</conceptMapping>
