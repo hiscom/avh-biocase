@@ -796,7 +796,7 @@
 					<dataElement name="identificationID" min="0" max="1"
 						namespace="http://rs.tdwg.org/dwc/terms"
 						w3cType="normalizedString"
-						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/locationID">
+						path="/SimpleDarwinRecordSet/SimpleDarwinRecord/identificationID">
 						<annot></annot>
 					</dataElement>
 					<dataElement name="identificationQualifier" min="0" max="1"
