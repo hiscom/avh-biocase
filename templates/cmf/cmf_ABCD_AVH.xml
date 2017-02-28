@@ -6855,6 +6855,25 @@
 												name="language" w3cType="language" min="0"/>
 												</attributes>
 											</dataElement>
+											<dataElement name="ValidDistributionFlag" min="0" max="1"
+												namespace="http://www.tdwg.org/schemas/abcd/2.06"
+												w3cType="boolean"
+												path="/DataSets/DataSet/Units/Unit/Gathering/ValidDistributionFlag">
+												<annot>A flag ("true" or "false") that indicates whether the locality information represents a valid distribution occurrence for a specimen. Specimens taken from captivity and showing the captive location should use the value "false". [DwC 1.4 Concept List r33.]</annot>
+											</dataElement>
+											<dataElement name="EstablishmentMeans" min="0" max="1"
+												namespace="http://www.tdwg.org/schemas/abcd/2.06"
+												w3cType="normalizedString"
+												path="/DataSets/DataSet/Units/Unit/Gathering/EstablishmentMeans">
+												<annot>The historical relationship of the occurrence to the cited time and place of 
+												collection or observation. Examples: 'wild', 'captive', 'cultivated', 
+												'cultivated ex wild', 'persisting from cultivation' [DwC discussion].</annot>
+												<attributes>
+												<attribute
+												path="/DataSets/DataSet/Units/Unit/Gathering/EstablishmentMeans[@language]"
+												name="language" w3cType="language" min="0"/>
+												</attributes>
+											</dataElement>
 											<dataElement name="LocalityText" min="0" max="1"
 												namespace="http://www.tdwg.org/schemas/abcd/2.06"
 												w3cType="normalizedString"
