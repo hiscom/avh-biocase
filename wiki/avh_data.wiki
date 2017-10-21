@@ -70,7 +70,7 @@
 |/DataSets/DataSet/Units/Unit/UnitGUID
 |}
 ===catalogNumber===
-===recordNumber==={| class="wikitable" width="100%"
+{| class="wikitable" width="100%"
 |- 
 !width="15%" | qualName 
 |width="85%" | http://rs.tdwg.org/dwc/terms/catalogNumber
@@ -78,6 +78,17 @@
 !abcd 
 |/DataSets/DataSet/Units/Unit/UnitID
 |}
+
+===recordNumber===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/recordNumber
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/CollectorsFieldNumber
+|}
+
 ===recordedBy===
 {| class="wikitable" width="100%"
 |- 
@@ -203,50 +214,416 @@ or
 
 ==Organism==
 ===previousIdentifications===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/previousIdentifications
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition
+|}
 
 
 ==Event==
 ===eventDate===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/eventDate
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/DateTime/ISODateTimeBegin + /DataSets/DataSet/Units/Unit/Gathering/DateTime/ISODateTimeEnd
+|}
+
 ===verbatimEventDate===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/verbatimEventDate
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/DateTime/DateText
+|}
+
 ===habitat===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/habitat
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/Biotope/Text
+|}
+
 ===eventRemarks===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/eventRemarks
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/UnitExtension/Event/eventRemarks
+or /DataSets/DataSet/Units/Unit/NamedCollectionsOrSurveys/NamedCollectionOrSurvey[0]
+|}
+
 
 ==Location==
 ===continent===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/continent
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea[AreaClass="continent"]/AreaName
+or /DataSets/DataSet/Units/Unit/UnitExtension/Location/continent
+|}
+
 ===waterBody===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/waterBody
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea[AreaClass="waterBody"]/AreaName
+or /DataSets/DataSet/Units/Unit/UnitExtension/Location/waterBody
+|}
+
 ===islandGroup===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/islandGroup
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea[AreaClass="islandGroup"]/AreaName
+or /DataSets/DataSet/Units/Unit/UnitExtension/Location/islandGroup
+|}
+
 ===island===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/island
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea[AreaClass="island"]/AreaName
+or /DataSets/DataSet/Units/Unit/UnitExtension/Location/island
+|}
+
 ===country===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/country
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/Country/Name
+|}
+
 ===countryCode===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/countryCode
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/Country/ISO3166Code
+|}
+
 ===stateProvince===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/stateProvince
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea[AreaClass="stateProvince"]/AreaName
+or /DataSets/DataSet/Units/Unit/UnitExtension/Location/stateProvince
+|}
+
 ===county===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/county
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea[AreaClass="county"]/AreaName
+or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
+|}
+
 ===locality===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/locality
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/LocalityText
+|}
+
 ===verbatimLocality===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/verbatimLocality
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/LocalityText
+|}
+
 ===minimumElevationInMeters===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/minimumElevationInMeters
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/Altitude/MeasurementOrFactAtomised[UnitOfMeasurement="metres"]/LowerValue
+|}
+
 ===maximumElevationInMeters===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/maximumElevationInMeters
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/Altitude/MeasurementOrFactAtomised[UnitOfMeasurement="metres"]/UpperValue
+|}
+
 ===verbatimElevation===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/verbatimElevation
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/Altitude/MeasurementOrFactText
+|}
+
 ===minimumDepthInMeters===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/minimumDepthInMeters
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/Depth/MeasurementOrFactAtomised[UnitOfMeasurement="metres"]/LowerValue
+|}
+
 ===maximumDepthInMeters===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/maximumDepthInMeters
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/Depth/MeasurementOrFactAtomised[UnitOfMeasurement="metres"]/UpperValue
+|}
+
 ===verbatimDepth===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/verbatimDepth
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/Depth/MeasurementOrFactText
+|}
+
 ===minimumDistanceAboveSurfaceInMeters===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteMeasurementsOrFacts/SiteMeasurementOrFact/MeasurementOrFactAtomised[Parameter="distanceAboveSurface"][UnitOfMeasurement="metres"]/LowerValue
+|}
+
 ===maximumDistanceAboveSurfaceInMeters===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/maximumDistanceAboveSurfaceInMeters
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteMeasurementsOrFacts/SiteMeasurementOrFact/MeasurementOrFactAtomised[Parameter="distanceAboveSurface"][UnitOfMeasurement="metres"]/UpperValue
+|}
+
 ===locationRemarks===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/locationRemarks
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/AreaDetail
+|}
+
 ===decimalLatitude===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/decimalLatitude
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/LatitudeDecimal
+|}
+
 ===decimalLongitude===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/decimalLongitude
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/LongitudeDecimal
+|}
+
 ===geodeticDatum===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/geodeticDatum
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/SpatialDatum
+|}
+
 ===coordinateUncertainty===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/coordinateUncertainty
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/CoordinateErrorDistanceInMeters
+|}
+
 ===coordinatePrecision===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/coordinatePrecision
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Units/Unit/UnitExtension/Location/coordinatePrecision
+|}
+
 ===verbatimCoordinates===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/verbatimCoordinates
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesUTM
+|}
+
 ===verbatimLatitude===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/verbatimLatitude
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/VerbatimLatitude
+|}
+
 ===verbatimLongitude===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/verbatimLongitude
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/VerbatimLongitude
+|}
+
 ===verbatimCoordinateSystem===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/verbatimCoordinateSystem
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/UnitExtension/Location/verbatimCoordinateSystem
+|}
+
 ===verbatimSRS===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/verbatimSRS
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/UnitExtension/Location/verbatimSRS
+|}
+
 ===georeferencedBy===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/georeferencedBy
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/UnitExtension/Location/georeferencedBy
+|}
+
 ===georeferencedDate===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/georeferencedDate
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/UnitExtension/Location/georeferencedDate
+|}
+
 ===georeferenceProtocol===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/georeferenceProtocol
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinateMethod
+|}
+
 ===georeferenceSources===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/georeferenceSources
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/GeoreferenceSources
+|}
+
 ===georeferenceVerificationStatus===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/GeoreferenceVerificationStatus
+|}
+
 ===georeferenceRemarks===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/georeferenceRemarks
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/GeoreferenceRemarks
+|}
+
 
 ==Identification==
 ===identificationID===
