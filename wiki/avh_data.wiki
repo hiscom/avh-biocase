@@ -1,44 +1,1685 @@
-[[Category:AVH]][[Category:AVH Hub]]
+[[Category:AVH Hub]]
+<div style="color:#ff0000;font-weight:bold;">This page is under re-construction</div>
 
-==Record Level Terms==
-===datasetName===
-===modified===
+
+__TOC__
+
+[[AVH data providers]]
+
+== Delivery mechanism ==
+AVH data is delivered to ALA in the form of Darwin Core Archives, the structure of which is described on a separate subpage, [[/Darwin_Core_Archive|Darwin Core Archive]].
+
+== Concepts delivered ==
+
+===Collection Object group===
+
+====institutionCode====
 {| class="wikitable" width="100%"
-|- 
-!width="15%" | qualName 
-|width="85%" | http://purl.org/dc/terms/modified
-|- 
-!abcd 
-|/DataSets/DataSet/Units/Unit/DateLastEdited
+|-
+! HISPID <5
+| ± [[hispid:insid|insid]]
+|-
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0138 abcd://Unit/SourceInstitutionID]
+|-
+! DwC
+| [http://rs.tdwg.org/dwc/terms/institutionCode dwc:institutionCode]
 |}
-===institutionCode===
-===collectionCode===
-===basisOfRecord===
-===type===
-
-==Occurrence==
-===occurrenceID===
-===catalogNumber===
-===recordNumber===
-===recordedBy===
-===lifeStage===
-===reproductiveCondition===
-===establishmentMeans===
-===occurrenceStatus===
-===preparations===
-===associatedSequences===
-===occurrenceRemarks===
-===associatedTaxa===
-===associatedOccurrences===
-===otherCatalogNumbers===
-===disposition===
-
-==Organism==
-===previousIdentifications===
 
 
-==Event==
-===eventDate===
-===verbatimEventDate===
-===habitat===
-===eventRemarks===
+====collectionCode====
+{| class="wikitable" width="100%"
+|-
+! HISPID <5
+| insid
+|-
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0138 abcd://Unit/SourceID]
+|-
+! DwC
+| [http://rs.tdwg.org/dwc/terms/collectionCode dwc:collectionCode]
+|}
+
+
+====catalogNumber====
+{| class="wikitable" width="100%"
+|-
+! HISPID <5
+| [[hispid:insid|insid]] + [[hispid:accid|accid]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0138 abcd://Unit/SourceID] +
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0140 abcd://Unit/UnitID]
+|-
+! DwC
+| [http://rs.tdwg.org/dwc/terms/catalogNumber dwc:catalogNumber]
+|}
+
+
+====occurrenceID====
+{| class="wikitable" width="100%"
+|-
+! HISPID <5
+| &ndash;
+|-
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0137 abcd://Unit/UnitGUID]
+|-
+! DwC
+| [http://rs.tdwg.org/dwc/terms/occurrenceID dwc:occurrenceID]
+|}
+
+
+{| class="wikitable" width="100%"
+|-
+! HISPID <5
+| [[hispid:recsou|recsou]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0400 abcd://Unit/RecordBasis]
+|-
+! DwC
+| [http://rs.tdwg.org/dwc/terms/basisOfRecord dwc:basisOfRecord]
+|}
+'''Notes''': 
+* [http://rs.tdwg.org/dwc/terms/basisOfRecord basisOfRecord] is a required term in Darwin Core. If it is not provided by the herbarium, it will be set to 'PreservedSpecimen' (set as default in the [[#meta.xml_file|meta.xml file]]).
+
+
+{| class="wikitable"  width="100%"
+|-
+! HISPID < 5
+| [[hispid:ckin|ckin]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0401 abcd://Unit/KindOfUnit]
+|-
+! DwC
+| [http://rs.tdwg.org/dwc/terms/preparations dwc:preparations]
+|- style="vertical-align:top"
+|}
+
+
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:moddat|moddat]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0143 abcd://Unit/DateLastEdited]
+|-
+! DwC
+| [http://purl.org/dc/terms/modified dcterms:modified]
+|}
+'''Notes''':
+* While in ABCD this is called a 'Date', it is in fact a dateTime. If you have the time as well, please deliver it. It might prevent some records from ending up in limbo if the harvesting coincides with the updating of the BioCASe tables.
+
+===Collecting Event===
+====recordedBy====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:cnam|cnam]]
+|-
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0892 abcd://Unit/Gathering/Agents/GatheringAgent/@sequence] +
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0872 abcd://Unit/Gathering/Agents/GatheringAgent/AgentText] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0891 abcd://Unit/Gathering/Agents/GatheringAgent/@primarycollector] = TRUE
+
+or 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0893 abcd://Unit/Gathering/Agents/GatheringAgentsText]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/recordedBy dwc:recordedBy]
+|}
+&nbsp;
+
+====AdditionalCollectors====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:cnam2|cnam2]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0892 abcd://Unit/Gathering/Agents/GatheringAgent/@sequence] +
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0872 abcd://Unit/Gathering/Agents/GatheringAgent/AgentText] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0891 abcd://Unit/Gathering/Agents/GatheringAgent/@primarycollector] = FALSE
+
+|-
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+==== recordNumber ====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:cid|cid]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1338 abcd://Unit/CollectorsFieldNumber]
+|-
+! Darwin Core
+| <span style="text-decoration:line-through;">[http://rs.tdwg.org/dwc/terms/fieldNumber dwc:fieldNumber]</span> [http://rs.tdwg.org/dwc/terms/recordNumber dwc:recordNumber]
+|}
+'''Notes''':
+* This has so far been incorrectly delivered (by me, to ALA) as dwc:fieldNumber, but ended up in AVH correctly.
+&nbsp;
+
+====eventDate====
+{| class="wikitable"  width="100%"
+|-
+! HISPID 5
+| [[hispid:cdat|cdat]], [[hispid:cdat2|cdat2]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0863 abcd://Unit/Gathering/DateTime/ISODateTimeBegin]<br/>[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0866 abcd://Unit/Gathering/DateTime/ISODateTimeEnd]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/eventDate dwc:eventDate]
+|}
+'''Notes'''
+* Collecting start date and end date are combined in this concept. In Darwin Core, as in ISO 8601 intervals, they are separated by a slash.
+* Note that incomplete dates (like '2000-11', '2007') can and should be delivered in the IsoDateTime concepts, both for collecting and determination date. This means that the date fields in your BioCASe tables can not be of the datetime types, but have to be text strings, as otherwise either your DBMS won't let you store incomplete dates, or the BioCASe provider will not let them through, as the database's incomplete dates are not valid XML dateTimes. 
+&nbsp;
+
+====verbatimEventDate====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:textcdat|textcdat]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0861 abcd://Unit/Gathering/DateTime/DateText]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/verbatimEventDate dwc:verbatimEventDate]
+|}
+'''Notes''':
+* Please note that the [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0863 abcd://Unit/Gathering/DateTime/ISODateTimeBegin] can deal with incomplete dates. Hence such dates should be provided in that field and not in [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0861 abcd://Unit/Gathering/DateTime/DateText]
+
+&nbsp;
+
+====country====
+{| class="wikitable" width="100%"
+|-
+! HISPID <5
+| [[hispid:cou|cou]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0956 abcd://Unit/Gathering/Country/Name]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/country dwc:country]
+|}
+&nbsp;
+
+====countryCode====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:iso|iso]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0962 abcd://Unit/Gathering/Country/ISO3166Code]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/countryCode dwc:countryCode]
+|}
+&nbsp;
+
+====stateProvince====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:pru|pru]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0969 abcd:Unit/Gathering/NamedAreas/NamedArea&#91;AreaClass="State"&#93;/AreaName]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/stateProvince dwc:stateProvince]
+|}
+&nbsp;
+
+====locality====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:loc|loc]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0952 abcd://Unit/Gathering/LocalityText]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/locality dwc:locality]
+|}
+&nbsp;
+
+====GeneralisedLocality====
+{| class="wikitable" width="100%"
+|-
+! HISPID <5
+| [[hispid:nnp|nnp]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0977 abcd://Unit/Gathering/NearNamedPlaces/NamedPlaceRelation/NearNamedPlace]
+|-
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====NearNamedPlaceRelationTo====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0980 abcd://Unit/Gathering/NearNamedPlaces/NamedPlaceRelation/NearNamedPlaceRelationTo]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====decimalLatitude====
+{| class="wikitable"  width="100%"
+! HISPID <5
+| &ndash;
+|-
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1004 abcd://Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/LatitudeDecimal]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/decimalLatitude dwc:decimalLatitude]
+|}
+&nbsp;
+
+====verbatimLatitude====
+{| class="wikitable" style="background-color: #eeeeee;"  width="100%"
+|-
+! HISPID <5
+| [[hispid:latdeg|latdeg]]° &#91;[[hispid:latmin|latmin]]' &#91;[[hispid:latsec|latsec]]"]] [[hispid:latdir|latdir]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | abcd://Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/VerbatimLatitude
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/verbatimLatitude dwc:verbatimLatitude]
+|}
+'''Notes''':
+* ALA has its own use for [[#verbatimLatitude|verbatimLatitude]] and [[#verbatimLongitude|verbatimLongitude]], as for records of sensitive taxa these fields are used for the non-generalised latitude and longitude (for those who have access to the sensitive data).
+
+&nbsp;
+
+====decimalLongitude====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1003 abcd://Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/LongitudeDecimal]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/decimalLongitude dwc:decimalLongitude]
+|}
+
+&nbsp;
+
+====verbatimLongitude====
+{| class="wikitable" style="background-color: #eeeeee;"  width="100%"
+|-
+! HISPID <5
+| [[hispid:londeg|londeg]]° &#91;[[hispid:lonmin|lonmin]]' &#91;[[hispid:lonsec|lonsec]]"]] [[hispid:londir|londir]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | abcd://Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/VerbatimLongitude
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/verbatimLongitude dwc:verbatimLongitude]
+|}
+&nbsp;
+
+====verbatimCoordinates====
+{| class="wikitable" width="100%"
+|-
+! HISPID <5
+| [[hispid:sgp|sgp]] [[hispid:sgz|sgz]] [[hispid:sgn|sgn]]
+|-
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1010 abcd://Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/CoordinatesText]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/verbatimCoordinates dwc:verbatimCoordinates]
+|}
+'''Notes''':
+* Only to be used for UTM type georeferences. Sexagesimal latitudes and longitudes may be delivered as [[#verbatimLatitude|verbatimLatitude]] and [[#verbatimLongitude|verbatimLongitude]].
+* The HISPID 5 extension elements for the atomised sexagesimal latitudes and longitudes are not supported.
+&nbsp;
+
+====geodeticDatum====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:spadat|spadat]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1005 abcd://Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/SpatialDatum]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/geodeticDatum dwc:geodeticDatum]
+|}
+&nbsp;
+
+====coordinateUncertaintyInMeters====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:geoacy|geoacy]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1008 abcd://Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/CoordinateErrorDistanceInMeters]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/coordinateUncertaintyinMeters dwc:coordinateUncertaintyInMeters]
+|}
+&nbsp;
+
+====georeferencedBy====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:geosou|geosou]] p.p.
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | &ndash;
+|-
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/georeferencedBy
+|}
+'''Notes''':
+* The HISPID [[HISPID_5_for_HISPID_Users#geosou|Geocode Source]] is a mixed concept, as it is a mixture of by whom and how the record was georeferenced. In Darwin Core we map the items 'collector' and 'compiler' to [http://rs.tdwg.org/dwc/terms/georeferencedBy dwc:georeferencedBy] and the items 'generalised arbitrary point', 'automatically generated', 'gps' and 'topo' to [http://rs.tdwg.org/dwc/terms/georeferenceProtocol dwc:georeferenceProtocol] ([[#georeferenceProtocol|next element]])
+* There is currently no element in ABCD to indicate who provided the georeference. This would be a good candidate for addition in a future version.
+
+&nbsp;
+
+====georeferenceProtocol====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:geosou|geosou]] p.p.
+|-
+! width="15%" | ABCD / HISPID 5 /HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0992 abcd://Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinateMethod]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/georeferenceProtocol dwc:georeferenceProtocol]
+|}
+'''Notes''':
+* See [[#georeferencedBy|georeferencedBy]].
+&nbsp;
+
+====minimumElevationinMeters====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:alt|alt]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1028 abcd://Unit/Gathering/Altitude/MeasurementOrFactAtomised/LowerValue] with
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1034 abcd://Unit/Gathering/Altitude/MeasurementOrFactAtomised/UnitOfMeasurement] = 'metres'
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/minimumElevationInMeters dwc:minimumElevationInMeters]
+|}
+'''Notes''':
+* Altitudes in units other than metres will be converted to metres.
+&nbsp;
+
+====maximumElevationinMeters====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:altx|altx]]
+|-
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1031 abcd://Unit/Gathering/Altitude/MeasurementOrFactAtomised/UpperValue] with
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1034 abcd://Unit/Gathering/Altitude/MeasurementOrFactAtomised/UnitOfMeasurement] = 'metres'
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/maximumElevationInMeters dwc:maximumElevationInMeters]
+|}
+&nbsp;
+
+====verbatimElevation====
+{| class="wikitable" style="background-color: #eeeeee"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1041 abcd://Unit/Gathering/Altitude/MeasurementOrFactText]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/verbatimElevation dwc:verbatimElevation]
+|}
+'''Notes''':
+* Use this for altitude strings like 'below 1100 m' (you can't just have [[#maximumElevationInMeters|maximumElevationInMeters]]).
+* If altitudes are delivered in units other than metres the provided values will be stored as [[#verbatimElevation|verbatimElevation]] (HISPID has always required altitude to be transferred in metres though).
+&nbsp;
+
+====minimumDepthInMeters====
+{| class="wikitable" width="100%"
+|-
+! HISPID <5
+| [[hispid:dep|dep]]
+|-
+! width="15%" | ABCD / HISPID 5 /HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1059 abcd://Unit/Gathering/Depth/MeasurementOrFactAtomised/LowerValue] with
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1065 abcd://Unit/Gathering/Depth/MeasurementOrFactAtomised/UnitOfMeasurement] = 'metres'
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/minimumDepthInMeters dwc:minimumDepthInMeters]
+|}
+'''Notes''':
+* Depths in units other than metres will be converted to metres.
+&nbsp;
+
+====maximumDepthinMeters====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:depx|depx]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1003 abcd://Unit/Gathering/Depth/MeasurementOrFactAtomised/UpperValue] with
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1065 abcd://Unit/Gathering/Depth/MeasurementOrFactAtomised/UnitOfMeasurement] = 'metres'
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/maximumDepthInMeters dwc:maximumDepthInMeters]
+|}
+&nbsp;
+
+====verbatimDepth====
+{| class="wikitable" style="background-color: #eeeeee"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1072 abcd://Unit/Gathering/Depth/MeasurementOrFactText]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/verbatimDepth dwc:verbatimDepth]
+|}
+'''Notes''':
+* Use this for depth strings like 'below 1100 m'. Can also be used for depth in fathoms etc.
+&nbsp;
+
+====habitat====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:hab|hab]]
+|-
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1231 abcd://Unit/Gathering/Biotope/Text]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/habitat dwc:habitat]
+|}
+
+HISPID also has the following elements that together can make up the habitat description. Of these [[hispid:top|Topography]] and [[hispid:asspp|Associated Taxa]] have Darwin Core equivalents. For AVH we could either concatenate all other elements into [http://rs.tdwg.org/dwc/terms/habitat dwc:habitat] or see to what extent the Darwin Core [http://darwincore.googlecode.com/svn/trunk/terms/index.htm#MeasurementOrFact MeasurementOrFact] class is available to us.
+===== Substrate =====
+{| class="wikitable" width="100%"
+|-
+! width="15%" | HISPID <5
+| width="85%" | [[hispid:sub|sub]]
+|-
+! ABCD / HISPID 5
+| hispid5://Unit/UnitExtension/HispidGathering/Substrate
+
+or 
+
+abcd://Unit/Gathering/Biotope/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised/LowerValue with
+
+abcd://Unit/Gathering/Biotope/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised/Parameter = 'substrate'
+|-
+! Darwin Core
+| &ndash;
+|}
+
+===== Soil =====
+{| class="wikitable" width="100%"
+|-
+! width="15%" | HISPID <5
+| width="85%" | [[hispid:soil|soil]]
+|-
+! ABCD / HISPID 5
+| hispid5://Unit/UnitExtension/HispidGathering/Soil
+
+or 
+
+abcd://Unit/Gathering/Biotope/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised/LowerValue with
+
+abcd://Unit/Gathering/Biotope/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised/Parameter = 'soil'
+|-
+! Darwin Core
+| &ndash;
+|}
+
+===== Vegetation =====
+{| class="wikitable" width="100%"
+|-
+! width="15%" | HISPID <5
+| width="85%" | [[hispid:veg|veg]]
+|-
+! ABCD / HISPID 5
+| hispid5://Unit/UnitExtension/HispidGathering/Vegetation
+
+or 
+
+abcd://Unit/Gathering/Biotope/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised/LowerValue with
+
+abcd://Unit/Gathering/Biotope/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised/Parameter = 'vegetation'
+|-
+! Darwin Core
+| &ndash;
+|}
+
+===== Topography =====
+{| class="wikitable" width="100%"
+|-
+! width="15%" | HISPID <5
+| width="85%" | [[hispid:top|top]]
+|-
+! ABCD / HISPID 5
+| [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0984 abcd://Unit/Gathering/AreaDetail]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/locationRemarks dwc:locationRemarks]
+|}
+
+===== Aspect =====
+{| class="wikitable" width="100%"
+|-
+! width="15%" | HISPID <5
+| width="85%" | [[hispid:top|top]]
+|-
+! ABCD / HISPID 5
+| [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1331 abcd://Unit/Gathering/Aspect/Ordination]
+|-
+! Darwin Core
+| &ndash;
+|}
+
+===== Associated taxa =====
+{| class="wikitable" width="100%"
+|-
+! width="15%" | HISPID <5
+| width="85%" | [[hispid:asspp|asspp]]
+|-
+! ABCD / HISPID 5
+| [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1283 abcd://Unit/Gathering/Synecology/AssociatedTaxa/TaxonIdentified/ScientificName/FullScientificNameString] 
+
+or
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1273 abcd://Unit/Gathering/Synecology/Comment]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/associatedTaxa dwc:associatedTaxa]
+|}
+
+====occurrenceRemarks====
+{| class="wikitable"  width="100%"
+|-
+! HISPID < 5
+| [[hispid:cnot|cnot]] ([[hispid:misc|misc]])
+|- 
+! width="15%" | ABCD / HISPID 5
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1335 abcd://Unit/Gathering/Notes]
+|- 
+! Darwin Core
+| 
+|}
+'''Notes'''
+* We need to discuss our Notes fields. To me the HISPID [[hispid:cnot|Collection notes (cnot)]] are [http://rs.tdwg.org/dwc/terms/occurrenceRemarks occurrenceRemarks], but in Darwin Core [http://rs.tdwg.org/dwc/terms/occurrenceRemarks occurrenceRemarks] is mapped to the ABCD [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1433 abcd://Unit/Notes] while [http://rs.tdwg.org/dwc/terms/eventRemarks eventRemarks] is mapped to [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1335 abcd://Unit/Gathering/Notes]. In HISPID 5 [[hispid:misc|Miscellaneous notes (misc)]] is mapped to [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1433 abcd://Unit/Notes].
+* In any case, I think we should use both elements, which we haven't done so far. AD and DNA deliver [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1433 abcd://Unit/Notes] as well as [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1335 abcd://Unit/Gathering/Notes], but the former has been ignored in the aggregation script (because I only just worked out what it meant).
+&nbsp;
+
+===Current Determination===
+The current determination is stored in the [[#Core_file|Core file]], while previous determinations are stored in
+the [[#Determination_History_Extension_file|Determination  History Extension file]]. If there is a single determination per record, this determination
+will be considered the current determination, no matter whether the PreferredFlag has been set or not.
+====nomenclaturalCode====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0341 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/Code]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/nomenclaturalCode dwc:nomenclaturalCode]
+|}
+'''Notes'''
+* Nobody is delivering this information and it is also not delivered to ALA. I have just indicated in the [[#meta.xml file| meta.xml file]] that all scientific names provided by Australian herbaria are botanical names (which is not exactly true, but they are provided as botanical names).
+&nbsp;
+
+====scientificName====
+{| class="wikitable"  width="100%"
+|- 
+! HISPID <5
+| [[hispid:fulnam|fulnam]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0295 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/FullScientificNameString]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/scientificName dwc:scientificName]
+|}
+'''Notes''':
+* The GBIF name parser (that is used by ALA) does not recognise the most common determination qualifier in AVH, the question mark, as a determination qualifier and most herbaria currently  supply scientific names with qualifiers. Scientific names that are supplied with a question mark will, unless the question mark precedes the name, not be part of the results when you search for the scientific name.
+&nbsp;
+
+====kingdom====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0292 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonName] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0293 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonRank] = 'regnum'
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/family dwc:kingdom]
+|}
+&nbsp;
+
+====phylum====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0292 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonName] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0293 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonRank] = 'phylum'
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/family dwc:phylum]
+|}
+&nbsp;
+
+====class====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0292 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonName] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0293 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonRank] = 'classis'
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/family dwc:class]
+|}
+&nbsp;
+
+====order====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0292 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonName] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0293 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonRank] = 'ordo'
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/family dwc:order]
+|}
+&nbsp;
+
+====family====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:fam|fam]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0292 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonName] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0293 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonRank] = 'familia'
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/family dwc:family]
+|}
+&nbsp;
+
+====genus====
+{| class="wikitable"  width="100%"
+|-
+! HISPID < 5
+| [[hispid:gen|gen]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0307 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/GenusOrMonomial]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/genus dwc:genus]
+|}
+'''Notes''':
+* In ABCD this field can contain the name of a genus or of a family, order etc., while in Darwin Core it can only be the name of a genus.
+* This field is used by ALA. Please only deliver generic names in this element.
+&nbsp;
+
+====specificEpithet====
+{| class="wikitable"  width="100%"
+|-
+! HISPID 5
+| [[hispid:sp|sp]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0308 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/FirstEpithet]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/specificEpithet dwc:specificEpithet]
+|}
+
+'''Notes''':
+* This is called FirstEpithet in ABCD, because in ABCD it can also be a name of a subgenus or subfamily etc. Not so in Darwin Core.
+&nbsp;
+
+====taxonRank====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:isprk|isprk]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0310 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/Rank]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/taxonRank dwc:taxonRank]
+|}
+&nbsp;
+
+====infraspecificEpithet====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:isp|isp]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0309 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/InfraspecificEpithet]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/infraspecificEpithet dwc:infraspecificEpithet]
+|}
+&nbsp;
+
+====CultivarName====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:culnam|culnam]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0315 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/CultivarName]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====scientificNameAuthorship====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:spau|spau]] | [[hispid:ispau|ispau]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0312 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/AuthorTeamParenthesis]
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0313 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/AuthorTeam]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/scientificNameAuthorship dwc:scientificNameAuthorship]
+|}
+'''Notes''':
+* If you don't split off the parenthetical authors, but deliver the entire string as AuthorTeam, you are forgiven. That's what I do. This seems to be atomisation gone mad a bit.
+&nbsp;
+
+====nomenclaturalStatus====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0338 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/NameComments]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/nomenclaturalStatus dwc:nomenclaturalStatus]
+|}
+
+'''Notes''':
+* While ABCD has this as any free text comments about the name, my use of this element would be very close to the definition of the Darwin Core term [http://rs.tdwg.org/dwc/terms/nomenclaturalStatus nomenclaturalStatus]. Nobody is delivering it and ALA is not using the atomised taxon names, so this term is here merely for completeness.
+* Actually, it turns out CNS and NSW deliver this &ndash;[[User:Nklaze|NielsKlazenga]] 12:28, 13 May 2012 (EST)
+&nbsp;
+
+====identificationQualifier====
+
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:idql|idql]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0332 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/IdentificationQualifier]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====IdentificationQualifierInsertionPoint====
+
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:rkql|rkql]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0333 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/IdentificationQualifier/@insertionpoint]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====DwC identificationQualifier====
+
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0332 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/IdentificationQualifier]<br/>
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0333 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/IdentificationQualifier/@insertionpoint]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/identificationQualifier
+|}
+'''Notes''':
+* In Darwin Core determination qualifier works differently from ABCD. In Darwin Core the identification qualifier consists of the qualifier plus all parts of the name that come after it. This will be concatenated from the atomised name using the insertion point to know where to start. If the insertion point (or even the qualifier) is not provided, we'll try to reconstruct it from the scientific name string. We also deliver the ABCD terms, as they are easier to work with.
+&nbsp;
+
+====NameAddendum====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:spql|spql]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0334 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/NameAddendum]
+|- 
+! Darwin Core
+| &ndash;
+|}
+'''Notes'''
+* Perhaps we could combine this with the identification qualifier, so that it can be used in the same facet?
+&nbsp;
+
+====DeterminerRole====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:det|det]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0376 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Identifiers/IdentifierRole]
+|- 
+! Darwin Core
+| &ndash;
+|}
+'''Notes''':
+* There is no Darwin Core equivalent. I don't think we need it, as everybody uses it slightly differently and it can be derived from the chronology of the determinations. It is already in AVH, so I'll shut up.
+&nbsp;
+
+====identifiedBy====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:vnam|vnam]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0371 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Identifiers/IdentifiersText]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/identifiedBy dwc:identifiedBy]
+|}
+&nbsp;
+
+====dateIdentified====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:vdat|vdat]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0385 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Date/ISODateTimeBegin]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/dateIdentified dwc:dateIdentified]
+|}
+&nbsp;
+
+====VerbatimDeterminationDate====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:texvdat|texvdat]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0383 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"@#93;/Date/DateText]
+|- 
+! Darwin Core
+| &ndash;
+|}
+'''Notes''':
+* Do we need this? Verbatim determination dates are often delivered, but they are (almost) always incomplete dates, which should be provided as [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0385 abcd://Unit/Identifications/Identification/Date/ISODateTimeBegin]. Rather than the AVH harvester trying to find proper dates that are delivered as verbatim dates (which I did once), it would be much better if herbaria corrected this in their providers.
+&nbsp;
+
+====identificationRemarks====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| <span style="text-decoration: line-through;">[[hispid:namcom|namcom]]</span> [[HISPID_5_for_HISPID_Users#idcom|idcom]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0395 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Notes]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/identificationRemarks dwc:identificationRemarks]
+|}
+&nbsp;
+
+=== Identification history ===
+
+We currently present this as a separate [[#Determination History Extension file|file]] in the Darwin Core Archive, which is stored, but which otherwise ALA can't do anything with it. There is a Darwin Core element [http://rs.tdwg.org/dwc/terms/previousIdentifications dwc:previousIdentifications] that I propose to concatenate the determination history into. Preferred delivery method is still using the ABCD [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0287 //Unit/Identifications/Identification/*] elements listed above, using one [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0287 Identification] element for each determination and with the [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0345 //Unit/Identifications/Identification/PreferredFlag] set to FALSE, but for herbaria that can't provide identification history in atomised form (but can as a string) the ABCD [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0399 //Unit/Identifications/IdentificationHistory] element is available.
+
+==== previousIdentifications ====
+{| class="wikitable" width="100%"
+|-
+! width="15%" | HISPID <5
+| width="85%" | [[hispid:vhist|vhist]]
+|-
+! ABCD / HISPID 5
+| [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0287 //Unit/Identifications/Identification/*] with [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0345 //Unit/Identifications/Identification/PreferredFlag] = FALSE
+
+or
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0399 abcd://Unit/Identifications/IdentificationHistory]
+|-
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/previousIdentifications dwc:previousIdentifications]
+|}
+&nbsp;
+
+===Type status designations===
+Type status designations are delivered both as the atomised ABCD concepts and as the concatenated Darwin Core string. Note that type status designations will only be passed on if at least the typified name and the type status name have been delivered.
+
+====typeStatus====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:tsta|tsta]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0645 abcd://Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0&#93;/TypeStatus]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====TypifiedName====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:basnam|basnam]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0604 abcd://Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0&#93;/TypifiedName/FullScientificNameString]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====DoubtfulFlag====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:tql|tql]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0647 abcd://Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0&#93;/DoubtfulFlag]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====Verifier====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0649 abcd://Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0&#93;/Verifier/FullName]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====VerificationDate====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0657 abcd://Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0&#93;/VerificationDate]
+|- 
+! Darwin Core
+| &nbsp;
+|}
+&nbsp;
+
+====VerificationNotes====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0658 abcd://Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0&#93;/VerificationNotes]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====DwC typeStatus====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0647 abcd://Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0&#93;/DoubtfulFlag]<br/>
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0645 abcd://Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0&#93;/TypeStatus]<br/>
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0604 abcd://Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0&#93;/TypifiedName/FullScientificNameString]<br/>
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0649 abcd://Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0&#93;/Verifier/FullName]<br/>
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0657 abcd://Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0&#93;/VerificationDate]<br/>
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0658 abcd://Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0&#93;/VerificationNotes]<br/>
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/typeStatus
+|}
+'''Notes''':
+* DwC typeStatus will be concatenated from the various ABCD NomenclaturalTypeDesignation fields.
+&nbsp;
+
+===Exchange===
+====ExHerb====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:don|don]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0581 abcd://Unit/SpecimenUnit/History/PreviousUnits/PreviousUnit/PreviousSourceID]
+|- 
+! Darwin Core
+| &dash;
+|}
+&nbsp;
+
+====ExHerbCatalogNumber====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:donacc|donacc]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0581 abcd://Unit/SpecimenUnit/History/PreviousUnits/PreviousUnit/PreviousSourceID] +
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0582 abcd://Unit/SpecimenUnit/History/PreviousUnits/PreviousUnit/PreviousUnitID]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====DuplicatesDistributedTo====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:desrep|desrep]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0711 abcd://Unit/HerbariumUnit/DuplicatesDistributedTo]
+|- 
+! Darwin Core
+| &ndash;
+|}
+'''Notes ''':
+* <span style="color:#ff0000">Unit/SpecimenUnit/DuplicatesDistributedTo</span> is an error in the HISPID 5 template CMF file. Herbaria that are delivering this concept should remap to [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0711 abcd://Unit/HerbariumUnit/DuplicatesDistributedTo].
+* The term 'duplicates elsewhere' occurs in [http://rs.tdwg.org/dwc/terms/disposition dwc:disposition], but recommended best practice for this field is a controlled vocabulary, so it should probably not be used for this.
+&nbsp;
+
+===Loans===
+====LoanNumber====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:loaid|loaid]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0712 abcd://Unit/HerbariumUnit/LoanIdentifier]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====LoanDestination====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:loades|loades]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0714 abcd://Unit/HerbariumUnit/LoanDestination]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====LoanForBotanist====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:loabot|loabot]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0715 abcd://Unit/HerbariumUnit/LoanForBotanist]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====LoanDate====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:loadat|loadat]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0717 abcd://Unit/HerbariumUnit/LoanDate]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====LoanReturnDate====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:loaret|loaret]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0718 abcd://Unit/HerbariumUnit/LoanReturnDate]
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+===Denormalised Named Areas===
+
+None of the following elements is actually used by ALA, but they are included in the Darwin Core Archive we deliver to ALA anyway. They may also serve a purpose for exchange between herbaria.
+
+Question:  what is the implication of this for specimens lacking georeference data?  I assume this means that these specimens will lack that information, however these regions may be signficant for users attempting to find data (e.g., NZ Ecological regions) ([[User:AWilton|AWilton]] 12:35, 19 March 2013 (EST))
+
+====Australian Herbarium Region====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:sru|sru]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0969 abcd://Unit/Gathering/NamedAreas/NamedArea/AreaName] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0966 abcd://Unit/Gathering/NamedAreas/NamedArea/AreaClass] = 'Australian Herbarium Region'
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====IBRARegion====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:sgu|sgu]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0969 abcd://Unit/Gathering/NamedAreas/NamedArea/AreaName] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0966 abcd://Unit/Gathering/NamedAreas/NamedArea/AreaClass] = 'IBRA Region'
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====IBRASubregion====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:sgu|sgu]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0969 abcd://Unit/Gathering/NamedAreas/NamedArea/AreaName] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0966 abcd://Unit/Gathering/NamedAreas/NamedArea/AreaClass] = 'IBRA Subregion'
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+===Denormalised Measurement or Facts===
+====Phenology====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:phe|phe]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1354 abcd://Unit/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised/LowerValue] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1348 abcd://Unit/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised/Parameter] = 'phenology'
+
+or 
+
+hispid5://Unit/UnitExtension/HISPIDUnit/Phenology 
+|- 
+! Darwin Core
+| &ndash;
+|}
+'''Notes''':
+* Multiple occurrences of the HISPID Phenology element within the same record will be concatenated.
+* This seems to map very nicely to [http://darwincore.googlecode.com/svn/trunk/terms/index.htm#reproductiveCondition dwc:reproductiveCondition]. --[[User:NielsKlazenga|NielsKlazenga]] 10:59, 11 November 2012 (EST)
+** I agree --[[User:AWilton|AWilton]] 12:37, 19 March 2013 (EST)
+&nbsp;
+
+====CultivatedOccurrence====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:poscul|poscul]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1354 abcd://Unit/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised/LowerValue] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1348 abcd://Unit/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised/Parameter] = 'CultivatedOccurrence'
+
+or
+
+abcd://Unit/HerbariumUnit/CultivatedOccurrence
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====NaturalOccurrence====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:posnat|posnat]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1354 abcd://Unit/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised&#91;Parameter="NaturalOccurrence"&#93;/LowerValue] with
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1348 abcd://Unit/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised/Parameter] = 'NaturalOccurrence'
+
+or
+
+abcd://Unit/HerbariumUnit/NaturalOccurrence
+|- 
+! Darwin Core
+| &ndash;
+|}
+&nbsp;
+
+====establishmentMeans====
+{| class="wikitable"  width="100%"
+|-
+! HISPID <5
+| [[hispid:posnat|posnat]] + [[hispid:poscul|poscul]]
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1354 abcd://Unit/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised&#91;Parameter="CultivatedOccurrence"&#93;/LowerValue] + <br/>
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept1354 abcd://Unit/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised&#91;Parameter="NaturalOccurrence"&#93;/LowerValue]
+|- 
+! Darwin Core
+| [http://rs.tdwg.org/dwc/terms/establishmentMeans dwc:establishmentMeans]
+|}
+'''Notes''':
+* I propose to combine [[#CultivatedOcurrence|CultivatedOccurrence]] and [[#NaturalOccurrence|NaturalOccurrence]] into this concept.
+*: That was in February, so this is not merely a proposal anymore. &ndash;[[User:NielsKlazenga|NielsKlazenga]] 21:13, 6 November 2012 (EST)
+
+&nbsp;
+
+==Determination History Extension file==
+
+Determination History is an extension in the GBIF [http://tools.gbif.org/dwca-assistant/ Darwin Core Archive Assistant]. ALA will use it to display determination history on the Specimen detail pages. Individual elements are the same as for the current determination.
+
+====scientificName====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0295 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/ScientificName/FullScientificNameString]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/scientificName
+|}
+&nbsp;
+
+====nomenclaturalCode====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0341 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/Code]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/nomenclaturalCode
+|}
+&nbsp;
+
+====family====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0292 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonName] with 
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0293 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonRank] = 'familia'
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/family
+|}
+&nbsp;
+
+====genus====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- style="vertical-align:top"
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0307 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/GenusOrMonomial]
+|- style="vertical-align:top"
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/genus
+|}
+&nbsp;
+
+====specificEpithet====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0308 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/FirstEpithet]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/specificEpithet
+|}
+&nbsp;
+
+====taxonRank====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0310 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/Rank]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/taxonRank
+|}
+&nbsp;
+
+====infraspecificEpithet====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0309 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/InfraspecificEpithet]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/infraspecificEpithet
+|}
+&nbsp;
+
+====CultivarName====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0315 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/CultivarName]
+|- 
+! Darwin Core
+| &nbsp;
+|}
+&nbsp;
+
+====scientificNameAuthorship====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0312 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/AuthorTeamParenthesis]
+
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0313 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/AuthorTeam]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/scientificNameAuthorship
+|}
+&nbsp;
+
+====nomenclaturalStatus====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0338 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/NameComments]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/nomenclaturalStatus
+|}
+&nbsp;
+
+====identificationQualifier====
+
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0332 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/IdentificationQualifier]
+|- 
+! Darwin Core
+| &nbsp;
+|}
+&nbsp;
+
+====IdentificationQualifierInsertionPoint====
+
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0333 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/IdentificationQualifier/@insertionpoint]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/identificationQualifier
+|}
+&nbsp;
+
+====DwC identificationQualifier====
+
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0332 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/IdentificationQualifier]<br/>
+[http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0333 abcd://Unit/Identifications/Identification&#91;PreferredFlag="true"&#93;/Result/TaxonIdentified/ScientificName/IdentificationQualifier/@insertionpoint]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/identificationQualifier
+|}
+&nbsp;
+
+====NameAddendum====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0334 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Result/TaxonIdentified/ScientificName/NameAddendum]
+|- 
+! Darwin Core
+| &nbsp;
+|}
+&nbsp;
+
+====DeterminerRole====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0376 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Identifiers/IdentifierRole]
+|- 
+! Darwin Core
+| &nbsp;
+|}
+&nbsp;
+
+====identifiedBy====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0371 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Identifiers/IdentifiersText]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/identifiedBy
+|}
+&nbsp;
+
+====dateIdentified====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0385 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Date/ISODateTimeBegin]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/dateIdentified
+|}
+&nbsp;
+
+====VerbatimDeterminationDate====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0383 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"@#93;/Date/DateText]
+|- 
+! Darwin Core
+| &nbsp;
+|}
+&nbsp;
+
+====identificationRemarks====
+{| class="wikitable"  width="100%" 
+|-
+! HISPID <5 
+| &ndash;
+|- 
+! width="15%" | ABCD / HISPID 5 
+| width="85%" | [http://wiki.tdwg.org/twiki/bin/view/ABCD/AbcdConcept0395 abcd://Unit/Identifications/Identification&#91;PreferredFlag="false"&#93;/Notes]
+|- 
+! Darwin Core
+| http://rs.tdwg.org/dwc/terms/identificationRemarks
+|}
+&nbsp;
