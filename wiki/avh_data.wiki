@@ -1,0 +1,44 @@
+[[Category:AVH]][[Category:AVH Hub]]
+
+==Record Level Terms==
+===datasetName===
+===modified===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://purl.org/dc/terms/modified
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/DateLastEdited
+|}
+===institutionCode===
+===collectionCode===
+===basisOfRecord===
+===type===
+
+==Occurrence==
+===occurrenceID===
+===catalogNumber===
+===recordNumber===
+===recordedBy===
+===lifeStage===
+===reproductiveCondition===
+===establishmentMeans===
+===occurrenceStatus===
+===preparations===
+===associatedSequences===
+===occurrenceRemarks===
+===associatedTaxa===
+===associatedOccurrences===
+===otherCatalogNumbers===
+===disposition===
+
+==Organism==
+===previousIdentifications===
+
+
+==Event==
+===eventDate===
+===verbatimEventDate===
+===habitat===
+===eventRemarks===
