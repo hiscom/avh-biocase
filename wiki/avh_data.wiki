@@ -61,20 +61,145 @@
 
 ==Occurrence==
 ===occurrenceID===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/occurrenceID
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/UnitGUID
+|}
 ===catalogNumber===
-===recordNumber===
+===recordNumber==={| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/catalogNumber
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/UnitID
+|}
 ===recordedBy===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/recordedBy
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/Agents/GatheringAgent/[@sequence][@primarycollector]AgentText
+or
+/DataSets/DataSet/Units/Unit/Gathering/Agents/GatheringAgentsText
+|}
+
 ===lifeStage===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/lifeStage
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Age
+|}
+
 ===reproductiveCondition===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/reproductiveCondition
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised[Parameter="phenology"]/LowerValue
+|}
+
 ===establishmentMeans===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/establishmentMeans
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/EstablishmentMeans
+|}
+
 ===occurrenceStatus===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/occurrenceStatus
+|- 
+!default
+|"present"
+|}
+
 ===preparations===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/preparations
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/KindOfUnit
+|}
+
 ===associatedSequences===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/associatedSequences
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Units/Unit/Sequences/Sequence[0..n]/URI
+|}
+
 ===occurrenceRemarks===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/occurrenceRemarks
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Units/Unit/Gathering/Notes
+|}
+
 ===associatedTaxa===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/associatedTaxa
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Gathering/Synecology/AssociatedTaxa/TaxonIdentified[0..n]/ScientificName/FullScientificNameString
+|}
+
 ===associatedOccurrences===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/associatedOccurrences
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Associations/UnitAssociation[0..n]
+|}
+
 ===otherCatalogNumbers===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/otherCatalogNumbers
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/SpecimenUnit/History/PreviousUnits/PreviousUnit/PreviousUnitID
+|}
+
 ===disposition===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/disposition
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition
+|}
+
 
 ==Organism==
 ===previousIdentifications===
