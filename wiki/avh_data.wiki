@@ -628,28 +628,336 @@ or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
 
 ==Identification==
 ===identificationID===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/identificationID
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/Extension/identificationID
+|}
+
 ===identificationQualifier===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/identificationQualifier
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/IdentificationQualifier
+
+/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/IdentificationQualifier[@insertionpoint]
+|}
+
 ===typeStatus===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/typeStatus
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0]/*
+|}
+
 ===identifiedBy===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/identifiedBy
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Identifiers/IdentifiersText
+|}
+
 ===dateIdentified===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/dateIdentified
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Date/ISODateTimeBegin
+|}
+
+===identificationRemarks===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/identificationRemarks
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Notes
+|}
+
 
 ==Taxon==
 ===ScientificName===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/scientificName
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/FullScientificNameString
+|}
+
 ===kingdom===
-===family===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/kingdom
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/HigherTaxa/HigherTaxon[HigherTaxonRank="regnum"]/HigherTaxonName
+|}
+
+===phylum===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/phylum
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/HigherTaxa/HigherTaxon[HigherTaxonRank="phylum"]/HigherTaxonName
+|}
+
 ===class===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/class
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/HigherTaxa/HigherTaxon[HigherTaxonRank="classis"]/HigherTaxonName
+|}
+
 ===order===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/order
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/HigherTaxa/HigherTaxon[HigherTaxonRank="ordo"]/HigherTaxonName
+|}
+
 ===family===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/family
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/HigherTaxa/HigherTaxon[HigherTaxonRank="familia"]/HigherTaxonName
+|}
+
 ===genus===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/genus
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/GenusOrMonomial
+|}
+
 ===specificEpithet===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/specificEpithet
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/FirstEpithet
+|}
+
 ===infraspecificEpithet===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/specificEpithet
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/InfraspecificEpithet
+|}
+
 ===taxonRank===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/specificEpithet
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/Extension/taxonRank
+|}
+
 ===scientificNameAuthorship===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/scientificNameAuthorship
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/AuthorTeam
+|}
+
 ===nomenclaturalCode===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/nomenclaturalCode
+|- 
+!default 
+|"ICBN"
+|}
+
 ===nomenclaturalStatus===
-===identificationRemarks===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/nomenclaturalCode
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/NameComments
+|}
+
 
 ==GGBN Loan==
 ===receivedFrom===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://data.ggbn.org/schemas/ggbn/terms/receivedFrom
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/SpecimenUnit/Acquisition/AcquisitionSourceText
+|}
+
 ===loanIdentifier===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://data.ggbn.org/schemas/ggbn/terms/loanIdentifier
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/HerbariumUnit/LoanIdentifier
+|}
+
 ===loanDestination===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://data.ggbn.org/schemas/ggbn/terms/loanDestination
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/HerbariumUnit/LoanDestination
+|}
+
+
+=Identification History Extension=
+==Identification==
+===identificationID===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/identificationID
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Result/Extension/identificationID
+|}
+
+===identificationQualifier===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/identificationQualifier
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Result/TaxonIdentified/ScientificName/IdentificationQualifier
+
+/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Result/TaxonIdentified/ScientificName/IdentificationQualifier[@insertionpoint]
+|}
+
+===identifiedBy===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/identifiedBy
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Identifiers/IdentifiersText
+|}
+
+===dateIdentified===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/dateIdentified
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Date/ISODateTimeBegin
+|}
+
+===identificationRemarks===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/identificationRemarks
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Notes
+|}
+
+
+==Taxon==
+===ScientificName===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/scientificName
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Result/TaxonIdentified/ScientificName/FullScientificNameString
+|}
+
+===taxonRank===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/specificEpithet
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Result/Extension/taxonRank
+|}
+
+===scientificNameAuthorship===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/scientificNameAuthorship
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/AuthorTeam
+|}
+
+===nomenclaturalCode===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/nomenclaturalCode
+|- 
+!default 
+|"ICBN"
+|}
+
+===nomenclaturalStatus===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/nomenclaturalCode
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/NameComments
+|}
+
+
