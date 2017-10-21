@@ -2,6 +2,14 @@
 
 ==Record Level Terms==
 ===datasetName===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/datasetName
+|- 
+!default 
+|"The Australasian Virtual Herbarium (AVH}"
+|}
 ===modified===
 {| class="wikitable" width="100%"
 |- 
@@ -12,9 +20,44 @@
 |/DataSets/DataSet/Units/Unit/DateLastEdited
 |}
 ===institutionCode===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/institutionCode
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/SourceInstitutionID
+|}
 ===collectionCode===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/collectionCode
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/SourceID
+|}
 ===basisOfRecord===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://rs.tdwg.org/dwc/terms/basisOfRecord
+|-
+!default
+|"PreservedSpecimen"
+|- 
+!abcd 
+|/DataSets/DataSet/Units/Unit/RecordBasis
+|}
 ===type===
+{| class="wikitable" width="100%"
+|- 
+!width="15%" | qualName 
+|width="85%" | http://purl.org/dc/terms/type
+|- 
+!default 
+|"PhysicalSpecimen"
+|}
 
 ==Occurrence==
 ===occurrenceID===
