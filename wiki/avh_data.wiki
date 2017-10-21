@@ -863,7 +863,7 @@ or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
 |width="85%" | http://rs.tdwg.org/dwc/terms/identificationID
 |- 
 !abcd 
-|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Result/Extension/identificationID
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/Extension/identificationID
 |}
 
 ===identificationQualifier===
@@ -873,9 +873,9 @@ or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
 |width="85%" | http://rs.tdwg.org/dwc/terms/identificationQualifier
 |- 
 !abcd 
-|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Result/TaxonIdentified/ScientificName/IdentificationQualifier
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/TaxonIdentified/ScientificName/IdentificationQualifier
 
-/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Result/TaxonIdentified/ScientificName/IdentificationQualifier[@insertionpoint]
+/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/TaxonIdentified/ScientificName/IdentificationQualifier[@insertionpoint]
 |}
 
 ===identifiedBy===
@@ -885,7 +885,7 @@ or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
 |width="85%" | http://rs.tdwg.org/dwc/terms/identifiedBy
 |- 
 !abcd 
-|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Identifiers/IdentifiersText
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Identifiers/IdentifiersText
 |}
 
 ===dateIdentified===
@@ -895,7 +895,7 @@ or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
 |width="85%" | http://rs.tdwg.org/dwc/terms/dateIdentified
 |- 
 !abcd 
-|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Date/ISODateTimeBegin
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Date/ISODateTimeBegin
 |}
 
 ===identificationRemarks===
@@ -905,7 +905,7 @@ or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
 |width="85%" | http://rs.tdwg.org/dwc/terms/identificationRemarks
 |- 
 !abcd 
-|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Notes
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Notes
 |}
 
 
@@ -917,7 +917,7 @@ or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
 |width="85%" | http://rs.tdwg.org/dwc/terms/scientificName
 |- 
 !abcd 
-|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Result/TaxonIdentified/ScientificName/FullScientificNameString
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/TaxonIdentified/ScientificName/FullScientificNameString
 |}
 
 ===taxonRank===
@@ -927,7 +927,7 @@ or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
 |width="85%" | http://rs.tdwg.org/dwc/terms/specificEpithet
 |- 
 !abcd 
-|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="false"]/Result/Extension/taxonRank
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/Extension/taxonRank
 |}
 
 ===scientificNameAuthorship===
@@ -937,7 +937,7 @@ or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
 |width="85%" | http://rs.tdwg.org/dwc/terms/scientificNameAuthorship
 |- 
 !abcd 
-|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/AuthorTeam
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/AuthorTeam
 |}
 
 ===nomenclaturalCode===
@@ -957,7 +957,7 @@ or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
 |width="85%" | http://rs.tdwg.org/dwc/terms/nomenclaturalCode
 |- 
 !abcd 
-|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/NameComments
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/TaxonIdentified/NameComments
 |}
 
 
