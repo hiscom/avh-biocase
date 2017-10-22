@@ -271,6 +271,7 @@ or
 |-
 !width="15%" | qualName
 |width="85%" | http://hiscom.chah.org.au/hispid/terms/collectingTrip
+|-
 !abcd
 |/DataSets/DataSet/Units/Unit/NamedCollectionsOrSurveys/NamedCollectionOrSurvey[0]
 |}
