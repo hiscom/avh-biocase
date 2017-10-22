@@ -266,17 +266,17 @@ or
 |/DataSets/DataSet/Units/Unit/UnitExtension/Event/eventRemarks
 |}
 
-===collectingTrip===
+===bushBlitzExpedition===
 {|
 |-
 !width="15%" | qualName
-|width="85%" | http://hiscom.chah.org.au/hispid/terms/collectingTrip
+|width="85%" | http://hiscom.chah.org.au/hispid/terms/bushBlitzExpedition
 |-
 !abcd
 |/DataSets/DataSet/Units/Unit/NamedCollectionsOrSurveys/NamedCollectionOrSurvey[0]
 |}
 
-'''collectingTrip''' is strictly only used to deliver names of BushBlitz expeditions to ALA, so they can be indexed and searched on.
+'''bushBlitzExpedition''' is strictly only used to deliver names of BushBlitz expeditions to ALA, so they can be indexed and searched on.
 The value will also be delivered as '''dwc:eventRemark''', if something is not already in there.
 
 
