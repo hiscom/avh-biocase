@@ -661,8 +661,8 @@ or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
 
 [[Image:https://github.com/hiscom/avh-biocase/raw/master/img/ABCDGGBN_p633.png]]
 
-__dwc:typeStatus__ is concatenated from elements of the __abcd:NomenclaturalTypeDesignation__, of which __TypifiedName__ and __TypeStatus__ are required (in AVH). 
-Values from __TypifiedName__ are also delivered separately as [typeForName](http://rs.tdwg.org/ontology/voc/Specimen#typeForName) from the TDWG Ontology, so that 
+'''dwc:typeStatus''' is concatenated from elements of the '''abcd:NomenclaturalTypeDesignation''', of which '''TypifiedName''' and '''TypeStatus''' are required (in AVH). 
+Values from '''TypifiedName''' are also delivered separately as [http://rs.tdwg.org/ontology/voc/Specimen#typeForName typeForName] from the TDWG Ontology, so that 
 it can be used to search and facet on.
 
 ===identifiedBy===
