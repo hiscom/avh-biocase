@@ -659,6 +659,8 @@ or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
 |/DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0]/*
 |}
 
+[[Image:https://github.com/hiscom/avh-biocase/raw/master/img/ABCDGGBN_p633.png]]
+
 ===identifiedBy===
 {| class="wikitable" width="100%"
 |- 
