@@ -1,0 +1,976 @@
+Occurrence Core
+---------------
+
+Record Level Terms
+~~~~~~~~~~~~~~~~~~
+
+datasetName
+^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|===================================================
+|qualName |http://rs.tdwg.org/dwc/terms/datasetName
+|default |"The Australasian Virtual Herbarium (AVH}"
+|===================================================
+
+modified
+^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=================================================
+|qualName |http://purl.org/dc/terms/modified
+|abcd |/DataSets/DataSet/Units/Unit/DateLastEdited
+|=================================================
+
+institutionCode
+^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|======================================================
+|qualName |http://rs.tdwg.org/dwc/terms/institutionCode
+|abcd |/DataSets/DataSet/Units/Unit/SourceInstitutionID
+|======================================================
+
+collectionCode
+^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=====================================================
+|qualName |http://rs.tdwg.org/dwc/terms/collectionCode
+|abcd |/DataSets/DataSet/Units/Unit/SourceID
+|=====================================================
+
+basisOfRecord
+^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|====================================================
+|qualName |http://rs.tdwg.org/dwc/terms/basisOfRecord
+|default |"PreservedSpecimen"
+|abcd |/DataSets/DataSet/Units/Unit/RecordBasis
+|====================================================
+
+type
+^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================
+|qualName |http://purl.org/dc/terms/type
+|default |"PhysicalSpecimen"
+|=======================================
+
+Occurrence
+~~~~~~~~~~
+
+occurrenceID
+^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|===================================================
+|qualName |http://rs.tdwg.org/dwc/terms/occurrenceID
+|abcd |/DataSets/DataSet/Units/Unit/UnitGUID
+|===================================================
+
+catalogNumber
+^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|====================================================
+|qualName |http://rs.tdwg.org/dwc/terms/catalogNumber
+|abcd |/DataSets/DataSet/Units/Unit/UnitID
+|====================================================
+
+recordNumber
+^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|========================================================
+|qualName |http://rs.tdwg.org/dwc/terms/recordNumber
+|abcd |/DataSets/DataSet/Units/Unit/CollectorsFieldNumber
+|========================================================
+
+recordedBy
+^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/recordedBy
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/Agents/GatheringAgent/[@sequence][@primarycollector]AgentText
+or /DataSets/DataSet/Units/Unit/Gathering/Agents/GatheringAgentsText
+|=======================================================================
+
+lifeStage
+^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|================================================
+|qualName |http://rs.tdwg.org/dwc/terms/lifeStage
+|abcd |/DataSets/DataSet/Units/Unit/Age
+|================================================
+
+reproductiveCondition
+^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/reproductiveCondition
+|abcd
+|/DataSets/DataSet/Units/Unit/MeasurementsOrFacts/MeasurementOrFact/MeasurementOrFactAtomised[Parameter="phenology"]/LowerValue
+|=======================================================================
+
+establishmentMeans
+^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=========================================================
+|qualName |http://rs.tdwg.org/dwc/terms/establishmentMeans
+|abcd |/DataSets/DataSet/Units/Unit/EstablishmentMeans
+|=========================================================
+
+occurrenceStatus
+^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================
+|qualName |http://rs.tdwg.org/dwc/terms/occurrenceStatus
+|default |"present"
+|=======================================================
+
+preparations
+^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|===================================================
+|qualName |http://rs.tdwg.org/dwc/terms/preparations
+|abcd |/DataSets/DataSet/Units/Unit/KindOfUnit
+|===================================================
+
+associatedSequences
+^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=====================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/associatedSequences
+|abcd |/DataSets/DataSet/Units/Units/Unit/Sequences/Sequence[0..n]/URI
+|=====================================================================
+
+occurrenceRemarks
+^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|========================================================
+|qualName |http://rs.tdwg.org/dwc/terms/occurrenceRemarks
+|abcd |/DataSets/DataSet/Units/Units/Unit/Gathering/Notes
+|========================================================
+
+associatedTaxa
+^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/associatedTaxa
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/Synecology/AssociatedTaxa/TaxonIdentified[0..n]/ScientificName/FullScientificNameString
+|=======================================================================
+
+associatedOccurrences
+^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=====================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/associatedOccurrences
+|abcd |/DataSets/DataSet/Units/Unit/Associations/UnitAssociation[0..n]
+|=====================================================================
+
+otherCatalogNumbers
+^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/otherCatalogNumbers
+|abcd
+|/DataSets/DataSet/Units/Unit/SpecimenUnit/History/PreviousUnits/PreviousUnit/PreviousUnitID
+|=======================================================================
+
+disposition
+^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|===========================================================
+|qualName |http://rs.tdwg.org/dwc/terms/disposition
+|abcd |/DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition
+|===========================================================
+
+Organism
+~~~~~~~~
+
+previousIdentifications
+^^^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|==============================================================
+|qualName |http://rs.tdwg.org/dwc/terms/previousIdentifications
+|abcd |/DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition
+|==============================================================
+
+Event
+~~~~~
+
+eventDate
+^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/eventDate
+|abcd |/DataSets/DataSet/Units/Unit/Gathering/DateTime/ISODateTimeBegin
++ /DataSets/DataSet/Units/Unit/Gathering/DateTime/ISODateTimeEnd
+|=======================================================================
+
+verbatimEventDate
+^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|==============================================================
+|qualName |http://rs.tdwg.org/dwc/terms/verbatimEventDate
+|abcd |/DataSets/DataSet/Units/Unit/Gathering/DateTime/DateText
+|==============================================================
+
+habitat
+^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=========================================================
+|qualName |http://rs.tdwg.org/dwc/terms/habitat
+|abcd |/DataSets/DataSet/Units/Unit/Gathering/Biotope/Text
+|=========================================================
+
+eventRemarks
+^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|===================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/eventRemarks
+|abcd |/DataSets/DataSet/Units/Unit/UnitExtension/Event/eventRemarks
+|===================================================================
+
+bushBlitzExpedition
+^^^^^^^^^^^^^^^^^^^
+
+[width="100%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://hiscom.chah.org.au/hispid/terms/bushBlitzExpedition
+|abcd
+|/DataSets/DataSet/Units/Unit/NamedCollectionsOrSurveys/NamedCollectionOrSurvey[0]
+|=======================================================================
+
+*bushBlitzExpedition* is strictly only used to deliver names of
+BushBlitz expeditions to ALA, so they can be indexed and searched on.
+The value will also be delivered as *dwc:eventRemark*, if something is
+not already in there.
+
+Location
+~~~~~~~~
+
+continent
+^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/continent
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea[AreaClass="continent"]/AreaName
+or /DataSets/DataSet/Units/Unit/UnitExtension/Location/continent
+|=======================================================================
+
+waterBody
+^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/waterBody
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea[AreaClass="waterBody"]/AreaName
+or /DataSets/DataSet/Units/Unit/UnitExtension/Location/waterBody
+|=======================================================================
+
+islandGroup
+^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/islandGroup
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea[AreaClass="islandGroup"]/AreaName
+or /DataSets/DataSet/Units/Unit/UnitExtension/Location/islandGroup
+|=======================================================================
+
+island
+^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/island
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea[AreaClass="island"]/AreaName
+or /DataSets/DataSet/Units/Unit/UnitExtension/Location/island
+|=======================================================================
+
+country
+^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=========================================================
+|qualName |http://rs.tdwg.org/dwc/terms/country
+|abcd |/DataSets/DataSet/Units/Unit/Gathering/Country/Name
+|=========================================================
+
+countryCode
+^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/countryCode
+|abcd |/DataSets/DataSet/Units/Unit/Gathering/Country/ISO3166Code
+|================================================================
+
+stateProvince
+^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/stateProvince
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea[AreaClass="stateProvince"]/AreaName
+or /DataSets/DataSet/Units/Unit/UnitExtension/Location/stateProvince
+|=======================================================================
+
+county
+^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/county
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea[AreaClass="county"]/AreaName
+or /DataSets/DataSet/Units/Unit/UnitExtension/Location/county
+|=======================================================================
+
+locality
+^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=========================================================
+|qualName |http://rs.tdwg.org/dwc/terms/locality
+|abcd |/DataSets/DataSet/Units/Unit/Gathering/LocalityText
+|=========================================================
+
+verbatimLocality
+^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=========================================================
+|qualName |http://rs.tdwg.org/dwc/terms/verbatimLocality
+|abcd |/DataSets/DataSet/Units/Unit/Gathering/LocalityText
+|=========================================================
+
+minimumElevationInMeters
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/minimumElevationInMeters
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/Altitude/MeasurementOrFactAtomised[UnitOfMeasurement="metres"]/LowerValue
+|=======================================================================
+
+maximumElevationInMeters
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/maximumElevationInMeters
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/Altitude/MeasurementOrFactAtomised[UnitOfMeasurement="metres"]/UpperValue
+|=======================================================================
+
+verbatimElevation
+^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/verbatimElevation
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/Altitude/MeasurementOrFactText
+|=======================================================================
+
+minimumDepthInMeters
+^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/minimumDepthInMeters
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/Depth/MeasurementOrFactAtomised[UnitOfMeasurement="metres"]/LowerValue
+|=======================================================================
+
+maximumDepthInMeters
+^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/maximumDepthInMeters
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/Depth/MeasurementOrFactAtomised[UnitOfMeasurement="metres"]/UpperValue
+|=======================================================================
+
+verbatimDepth
+^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/verbatimDepth
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/Depth/MeasurementOrFactText
+|=======================================================================
+
+minimumDistanceAboveSurfaceInMeters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName
+|http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteMeasurementsOrFacts/SiteMeasurementOrFact/MeasurementOrFactAtomised[Parameter="distanceAboveSurface"][UnitOfMeasurement="metres"]/LowerValue
+|=======================================================================
+
+maximumDistanceAboveSurfaceInMeters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName
+|http://rs.tdwg.org/dwc/terms/maximumDistanceAboveSurfaceInMeters
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteMeasurementsOrFacts/SiteMeasurementOrFact/MeasurementOrFactAtomised[Parameter="distanceAboveSurface"][UnitOfMeasurement="metres"]/UpperValue
+|=======================================================================
+
+locationRemarks
+^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================
+|qualName |http://rs.tdwg.org/dwc/terms/locationRemarks
+|abcd |/DataSets/DataSet/Units/Unit/Gathering/AreaDetail
+|=======================================================
+
+decimalLatitude
+^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/decimalLatitude
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/LatitudeDecimal
+|=======================================================================
+
+decimalLongitude
+^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/decimalLongitude
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/LongitudeDecimal
+|=======================================================================
+
+geodeticDatum
+^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/geodeticDatum
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/SpatialDatum
+|=======================================================================
+
+coordinateUncertainty
+^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/coordinateUncertainty
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/CoordinateErrorDistanceInMeters
+|=======================================================================
+
+coordinatePrecision
+^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/coordinatePrecision
+|abcd
+|/DataSets/DataSet/Units/Units/Unit/UnitExtension/Location/coordinatePrecision
+|=======================================================================
+
+verbatimCoordinates
+^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/verbatimCoordinates
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesUTM
+|=======================================================================
+
+verbatimLatitude
+^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/verbatimLatitude
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/VerbatimLatitude
+|=======================================================================
+
+verbatimLongitude
+^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/verbatimLongitude
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinatesLatLong/VerbatimLongitude
+|=======================================================================
+
+verbatimCoordinateSystem
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/verbatimCoordinateSystem
+|abcd
+|/DataSets/DataSet/Units/Unit/UnitExtension/Location/verbatimCoordinateSystem
+|=======================================================================
+
+verbatimSRS
+^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=====================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/verbatimSRS
+|abcd |/DataSets/DataSet/Units/Unit/UnitExtension/Location/verbatimSRS
+|=====================================================================
+
+georeferencedBy
+^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/georeferencedBy
+|abcd
+|/DataSets/DataSet/Units/Unit/UnitExtension/Location/georeferencedBy
+|=======================================================================
+
+georeferencedDate
+^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/georeferencedDate
+|abcd
+|/DataSets/DataSet/Units/Unit/UnitExtension/Location/georeferencedDate
+|=======================================================================
+
+georeferenceProtocol
+^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/georeferenceProtocol
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/CoordinateMethod
+|=======================================================================
+
+georeferenceSources
+^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/georeferenceSources
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/GeoreferenceSources
+|=======================================================================
+
+georeferenceVerificationStatus
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/GeoreferenceVerificationStatus
+|=======================================================================
+
+georeferenceRemarks
+^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/georeferenceRemarks
+|abcd
+|/DataSets/DataSet/Units/Unit/Gathering/SiteCoordinateSets/SiteCoordinates/GeoreferenceRemarks
+|=======================================================================
+
+Identification
+~~~~~~~~~~~~~~
+
+identificationID
+^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/identificationID
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/Extension/identificationID
+|=======================================================================
+
+identificationQualifier
+^^^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/identificationQualifier
+|abcd a|
+/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/IdentificationQualifier
+
+/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/IdentificationQualifier[@insertionpoint]
+
+|=======================================================================
+
+typeStatus
+^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/typeStatus
+|abcd
+|/DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeDesignation[0]/*
+|=======================================================================
+
+image:https://github.com/hiscom/avh-biocase/raw/master/img/ABCDGGBN_p633.png[https://github.com/hiscom/avh-biocase/raw/master/img/ABCDGGBN_p633.png,title="https://github.com/hiscom/avh-biocase/raw/master/img/ABCDGGBN_p633.png"]
+
+*dwc:typeStatus* is concatenated from elements of the
+*abcd:NomenclaturalTypeDesignation*, of which *TypifiedName* and
+*TypeStatus* are required (in AVH). Values from *TypifiedName* are also
+delivered separately as
+http://rs.tdwg.org/ontology/voc/Specimen#typeForName[typeForName] from
+the TDWG Ontology, so that it can be used to search and facet on.
+
+identifiedBy
+^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/identifiedBy
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Identifiers/IdentifiersText
+|=======================================================================
+
+dateIdentified
+^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/dateIdentified
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Date/ISODateTimeBegin
+|=======================================================================
+
+identificationRemarks
+^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/identificationRemarks
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Notes
+|=======================================================================
+
+Taxon
+~~~~~
+
+scientificName
+^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/scientificName
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/FullScientificNameString
+|=======================================================================
+
+kingdom
+^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/kingdom
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/HigherTaxa/HigherTaxon[HigherTaxonRank="regnum"]/HigherTaxonName
+|=======================================================================
+
+phylum
+^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/phylum
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/HigherTaxa/HigherTaxon[HigherTaxonRank="phylum"]/HigherTaxonName
+|=======================================================================
+
+class
+^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/class
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/HigherTaxa/HigherTaxon[HigherTaxonRank="classis"]/HigherTaxonName
+|=======================================================================
+
+order
+^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/order
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/HigherTaxa/HigherTaxon[HigherTaxonRank="ordo"]/HigherTaxonName
+|=======================================================================
+
+family
+^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/family
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/HigherTaxa/HigherTaxon[HigherTaxonRank="familia"]/HigherTaxonName
+|=======================================================================
+
+genus
+^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/genus
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/GenusOrMonomial
+|=======================================================================
+
+specificEpithet
+^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/specificEpithet
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/FirstEpithet
+|=======================================================================
+
+infraspecificEpithet
+^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/specificEpithet
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/InfraspecificEpithet
+|=======================================================================
+
+taxonRank
+^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/specificEpithet
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/Extension/taxonRank
+|=======================================================================
+
+scientificNameAuthorship
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/scientificNameAuthorship
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/AuthorTeam
+|=======================================================================
+
+nomenclaturalCode
+^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|========================================================
+|qualName |http://rs.tdwg.org/dwc/terms/nomenclaturalCode
+|default |"ICBN"
+|========================================================
+
+nomenclaturalStatus
+^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/nomenclaturalCode
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[PreferredFlag="true"]/Result/TaxonIdentified/NameComments
+|=======================================================================
+
+GGBN Loan
+~~~~~~~~~
+
+receivedFrom
+^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://data.ggbn.org/schemas/ggbn/terms/receivedFrom
+|abcd
+|/DataSets/DataSet/Units/Unit/SpecimenUnit/Acquisition/AcquisitionSourceText
+|=======================================================================
+
+loanIdentifier
+^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|================================================================
+|qualName |http://data.ggbn.org/schemas/ggbn/terms/loanIdentifier
+|abcd |/DataSets/DataSet/Units/Unit/HerbariumUnit/LoanIdentifier
+|================================================================
+
+loanDestination
+^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=================================================================
+|qualName |http://data.ggbn.org/schemas/ggbn/terms/loanDestination
+|abcd |/DataSets/DataSet/Units/Unit/HerbariumUnit/LoanDestination
+|=================================================================
+
+Identification History Extension
+--------------------------------
+
+Identification
+~~~~~~~~~~~~~~
+
+identificationID
+^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/identificationID
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/Extension/identificationID
+|=======================================================================
+
+identificationQualifier
+^^^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/identificationQualifier
+|abcd a|
+/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/TaxonIdentified/ScientificName/IdentificationQualifier
+
+/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/TaxonIdentified/ScientificName/IdentificationQualifier[@insertionpoint]
+
+|=======================================================================
+
+identifiedBy
+^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/identifiedBy
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Identifiers/IdentifiersText
+|=======================================================================
+
+dateIdentified
+^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/dateIdentified
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Date/ISODateTimeBegin
+|=======================================================================
+
+identificationRemarks
+^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/identificationRemarks
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Notes
+|=======================================================================
+
+Taxon
+~~~~~
+
+scientificName
+^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/scientificName
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/TaxonIdentified/ScientificName/FullScientificNameString
+|=======================================================================
+
+taxonRank
+^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/specificEpithet
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/Extension/taxonRank
+|=======================================================================
+
+scientificNameAuthorship
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/scientificNameAuthorship
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/TaxonIdentified/ScientificName/NameAtomised/Botanical/AuthorTeam
+|=======================================================================
+
+nomenclaturalCode
+^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|========================================================
+|qualName |http://rs.tdwg.org/dwc/terms/nomenclaturalCode
+|default |"ICBN"
+|========================================================
+
+nomenclaturalStatus
+^^^^^^^^^^^^^^^^^^^
+
+[width="10%",cols="15%,85%",options="header",]
+|=======================================================================
+|qualName |http://rs.tdwg.org/dwc/terms/nomenclaturalCode
+|abcd
+|/DataSets/DataSet/Units/Unit/Identifications/Identification[0..n]/Result/TaxonIdentified/NameComments
+|=======================================================================
+
+Category:AVH Category:AVH_Hub[Category:AVH Hub]
