@@ -1,7 +1,9 @@
+:toc:
+:toc-placement!:
+:toclevel: 4
+
 = AVH Data
 
-:toc:
-:toclevel: 4
 toc::[]
 
 == Occurrence Core
