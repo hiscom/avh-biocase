@@ -4,6 +4,8 @@
 
 = AVH Data
 
+== Table of Contents
+[h2]
 toc::[]
 
 == Occurrence Core
